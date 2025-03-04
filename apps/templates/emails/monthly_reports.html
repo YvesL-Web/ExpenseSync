@@ -1,0 +1,28 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Monthly Financial Report{% endblock title %}
+
+{% block content %}
+<p>Hello {{first_name}} {{last_name}},</p>
+<p>Here's a summary of your financial activity for {{month}}:</p>
+<ul>
+    <li>Total Income: ${{stats.total_income}}</li>
+    <li>Total Expenses: ${{stats.total_expenses}}</li>
+    <li>Net Income: ${{stats.total_income - stats.total_expenses}}</li>
+</ul>
+<h2>Expense Categories:</h2>
+<ul>
+    {% for category,amount in stats.by_category.items%}
+    <li>{{category}}: ${{amount}}</li>
+    {% endfor %}
+</ul>
+<h2>Insights:</h2>
+<ul>
+    {% for Insight in insights %}
+    <li>{{insight}}</li>
+    {% endfor %}
+</ul>
+<p>Thank you for using ExpenseSync.<br>
+    The {{site_name}} Team.
+</p>
+{% endblock content %}
