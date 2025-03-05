@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "ExpenseSync",
   description: "ExpenseSync is a modern money tracking platform for everyone.",
   icons: {
-    icon: '/icons/logo.svg'
+    icon: '/icons/temp-logo.svg'
   }
 };;
 

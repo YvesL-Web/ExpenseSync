@@ -1,4 +1,5 @@
 import HeaderBox from "@/components/HeaderBox";
+import RightSidebar from "@/components/RightSidebar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 
 const page = () => {
@@ -13,13 +14,21 @@ const page = () => {
             user={loggedIn?.firstName || "Guest"}
             subtext="Access and manage your account and transactions efficiently."
           />
-          <TotalBalanceBox 
+          <TotalBalanceBox
             accounts={[]}
             totalBanks={1}
-            totalCurrentBalance={5000.50}
+            totalCurrentBalance={5000.5}
           />
         </header>
+        {/* Recent Transactions */}
       </div>
+      <RightSidebar 
+        user={loggedIn}
+        // transactions={account?.transactions}
+        // banks={accountsData?.slice(0, 2)}
+        transactions={[]}
+        banks={[]}
+      />
     </section>
   );
 };
