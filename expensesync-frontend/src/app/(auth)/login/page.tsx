@@ -1,7 +1,12 @@
+import LoginForm from "@/components/forms/auth/LoginForm"
+// import AuthForm from "@/components/forms/AuthForm"
+
+
 const LoginPage = () => {
   return (
     <section className="flex-center size-full max-sm:px-6">
-      Loginpage
+      {/* <AuthForm type="sign-in"/> */}
+      <LoginForm />
     </section>
   )
 }
